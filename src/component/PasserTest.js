@@ -16,23 +16,28 @@ export default function PasserTest() {
 
 
         <div class="row">
-          <div class="col-md-12">
-            <form>
-              <div class="form-group">
-                <label for="exampleInputEmail1">Email address</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" />
-                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+          <div class="row column_title">
+            <fieldset>
+              <legend><h1>React est un excellent outil pour :</h1></legend>
+
+              <div>
+                <input type="radio"  />
+                <label ><h6>créer des bases de données.</h6> </label>
               </div>
-              <div class="form-group">
-                <label for="exampleInputPassword1">Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" />
+              <div>
+                <input type="radio"  />
+                <label ><h6>construire une interface utilisateur à partir de composants réutilisables</h6></label>
               </div>
-              <div class="form-check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1" />
-                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+              <div>
+                <input type="radio" ></input>
+                <label ><h6>créer un algorithme de machine learning</h6></label>
               </div>
-              <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
+              <div>
+                <input type="radio" ></input>
+                <label ><h6>créer le design d'une maquette.</h6></label>
+              </div>
+            </fieldset>
+            
           </div>
         </div>
       </div>
