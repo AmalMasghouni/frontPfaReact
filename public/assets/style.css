@@ -159,7 +159,7 @@ h1 {
 }
 
 .img-responsive {
-    max-width: 100%;
+    max-width: 65%;
 }
 
 h3 {
@@ -1761,7 +1761,8 @@ a[data-toggle="collapse"] {
 
 button.main_bt {
     float: none;
-    margin: 0;
+    margin: 10px;
+    
 }
 
 .main_bt:hover,
@@ -3082,22 +3083,24 @@ ul.labels-category li p {
 }
 
 .contact_blog h4.brief {
-    font-size: 15px;
+    font-size: 20px;
     font-weight: 300;
-    color: #455a64;
+    color: #012959;
     margin: -5px 0 5px;
     line-height: normal;
 }
 
 .contact_inner {
     float: left;
-    width: 100%;
+    width: 80%;
+   
 }
 
 .contact_inner .left {
     width: 70%;
     float: left;
-    padding-right: 20px;
+    padding-right: 100px;
+    padding-top: 40px;
 }
 
 .contact_inner .right {
@@ -3110,7 +3113,7 @@ ul.labels-category li p {
     text-transform: none;
     font-size: 20px;
     margin-bottom: 10px;
-    color: #455a64;
+    color: #012959;
 }
 
 .contact_inner p {
@@ -3130,14 +3133,15 @@ ul.labels-category li p {
     float: left;
     margin-right: 15px;
     font-size: 14px;
-    color: #58718a;
+    color: #ff9800;
     width: 100%;
 }
 
 .profile_contacts img {
-    border-radius: 100%;
+    border-radius: 10%;
     border: 1px solid #ddd;
-    padding: 4px;
+    padding: 1px;
+    margin-right:80px;
 }
 
 .bottom_list {

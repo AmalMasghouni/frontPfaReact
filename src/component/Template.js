@@ -1,7 +1,7 @@
 import React from 'react'
 import SideBar from './SideBar'
 import TopBar from './TopBar'
-import {Outlet }from 'react-router-dom';
+import {Link, Outlet }from 'react-router-dom';
 export default function Template() {
   return (
     <div >
@@ -14,6 +14,7 @@ export default function Template() {
                             <TopBar />
                             <div class="midde_cont">
                                 <Outlet />
+                                
                             </div>
                         </div>
          

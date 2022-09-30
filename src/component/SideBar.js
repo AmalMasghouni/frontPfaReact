@@ -55,4 +55,6 @@ export default function SideBar() {
             </nav>
     </div>
   )
+
 }
+
