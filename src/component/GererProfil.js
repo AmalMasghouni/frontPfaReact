@@ -1,9 +1,77 @@
-import React from 'react'
+import { Component } from "react";
+import EtudiantSer from "../service/EtudiantService/EtudiantSer";
+class GererProfil extends Component{
+   constructor(props) {
+      super(props)
 
-export default function GererProfil() {
-  return (
-    <div>
-        <div class="container-fluid">
+      this.state = {
+          id: this.props.match.params.id,
+          nom: '',
+          prenom: '',
+          dtnaissance: '',
+          phone:'',
+          email:'',
+          password:''
+      }
+      this.changeNomHandler = this.changeNomHandler.bind(this);
+      this.changePrenomHandler = this.changePrenomHandler.bind(this);
+      this.changeDtnaissanceHandler = this.changeDtnaissanceHandler.bind(this);
+      this.changePhoneHandler = this.changePhoneHandler.bind(this);
+      this.changeEmailHandler = this.changeEmailHandler.bind(this);
+      this.changePasswordHandler = this.changePasswordHandler.bind(this);
+      this.updateProfil = this.updateProfil.bind(this);
+  }
+  componentDidMount(){
+   EtudiantSer.updateProfil(this.state.id).then((res)=>{
+      let profil=res.data;
+      this.setState({
+         nom: profil.nom,
+          prenom: profil.prenom,
+          dtnaissance: profil.dtnaissance,
+          phone:profil.phone,
+          email:profil.email,
+          password:profil.password
+
+      });
+   });
+  }
+  updateProfil=(e)=>{
+  
+   let profil={nom: this.state.nom,
+      prenom: this.state.prenom,
+      dtnaissance: this.state.dtnaissance,
+      phone:this.state.phone,
+      email:this.state.email,
+      password:this.state.password
+}
+console.log('profil => ' + JSON.stringify(profil));
+console.log('id => ' + JSON.stringify(this.state.id));
+EtudiantSer.updateProfil(profil,this.state.id).then(res=>{
+   console.log("update")
+})
+  }
+  changeNomHandler= (event) => {
+   this.setState({nom: event.target.value});
+}
+changePrenomHandler= (event) => {
+   this.setState({prenom: event.target.value});
+}
+changeDtnaissanceHandler= (event) => {
+   this.setState({dtnaissance: event.target.value});
+}
+changePhoneHandler= (event) => {
+   this.setState({phone: event.target.value});
+}
+changeEmailHandler= (event) => {
+   this.setState({email: event.target.value});
+}
+changePasswordHandler= (event) => {
+   this.setState({password: event.target.value});}
+  
+   render()
+   {
+      return( <div>
+         <div class="container-fluid">
         
         
        
@@ -61,7 +129,8 @@ export default function GererProfil() {
           </div>
         </div>
       </div> 
-    </div>
-  )
+      </div>)
+   }
+   
 }
-
+export default GererProfil;
